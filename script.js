@@ -4,13 +4,11 @@ async function foo() {
         var resdata = await res.json();
         var memes = resdata.data.memes;
 
-        // Generate a random index to select a random meme from the array
         var randomIndex = Math.floor(Math.random() * memes.length);
         var randomMeme = memes[randomIndex];
 
-        // Create HTML elements to display the random meme
         var div = document.createElement("div");
-        div.className = "col-md-4 mb-4"; // Adjust spacing between meme cards
+        div.className = "col-md-4 mb-4"; 
         div.innerHTML = `
             <div class="card">
                 <img class="card-img-top" src="${randomMeme.url}" alt="Meme Image">
